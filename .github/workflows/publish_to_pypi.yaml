@@ -75,7 +75,6 @@ jobs:
           ./dist/*.tar.gz
           ./dist/*.whl
     - name: Create GitHub Release
-      if: steps.check_tag.outputs.exists == 'false'
       env:
         GITHUB_TOKEN: ${{ github.token }}
       run: >-
